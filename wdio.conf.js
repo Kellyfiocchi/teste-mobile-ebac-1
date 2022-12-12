@@ -11,10 +11,14 @@ exports.config = {
     capabilities: [{     
     "platformName": "Android",
     "platformVersion": "12.0",
-    "deviceName": "ebac",
+    "deviceName": "EXERCICIO16",
     "automationName": "UIAutomator2",
-    "app": join(process.cwd(), './app/android/loja-ebac.apk'),
-    "appWaitActivity": 'com.woocommerce.android.ui.login.LoginActivity'
-
-    }]
-}
+    "app": join(process.cwd(), './app/android/web.apk'),
+    "appWaitDuration": 400000,
+    "appPackage": 'com.wdiodemoapp',
+    "appActivity": 'com.wdiodemoapp.MainActivity',
+      "appWaitActivity": 'com.wdiodemoapp.MainActivity',
+      // appWaitActivity: 'com.woocommerce.android/.ui.login.LoginActivity',
+    },
+  ],
+};

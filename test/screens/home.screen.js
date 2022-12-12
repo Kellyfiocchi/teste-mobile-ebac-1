@@ -1,11 +1,9 @@
 class HomeScreen {
-    get #enterStoreAdress(){
-        return $('id:button_login_store')
+    async goToForms() {
+      const selector = '//android.widget.Button[@content-desc="Forms"]';
+      const button = $(`${selector}`);
+      button.click();
     }
-
-    async goToLogin(){
-        this.#enterStoreAdress.click()
-    }
-}
-
-module.exports = new HomeScreen()
+  }
+  
+  module.exports = new HomeScreen();
