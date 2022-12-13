@@ -5,7 +5,7 @@ describe('Teste em Android', () => {
   });
 
   it('Tela Form components', async () => {
-      await $('~text-input').setValue('Larissa')
+      await $('~text-input').setValue('Kelly')
       expect(await $('~text-input')).toBeDisplayed()
       await $('~Dropdown').click()
       const selector = 'new UiSelector().text("This app is awesome").className("android.widget.CheckedTextView")'
