@@ -1,10 +1,21 @@
-const homeScreen = require('../screens/home.screen');
-const formScreen = require('../screens/form.screen');
+describe('Teste em Android', () => {
+  it('Acessar o menu Forms', async () => {
+      await $('~Forms').click()
+      expect(await $('~text-input')).toBeDisplayed()
+  });
 
-describe('Access Admin Panel', () => {
-  it('should login with valid credentials', async () => {
-    await homeScreen.goToForms();
-    await formScreen.waitForIsShown(true);
-    await formScreen.fillForms();
+  it('Tela Form components', async () => {
+      await $('~text-input').setValue('Larissa')
+      expect(await $('~text-input')).toBeDisplayed()
+      await $('~Dropdown').click()
+      const selector = 'new UiSelector().text("This app is awesome").className("android.widget.CheckedTextView")'
+      const button = await $(`android=${selector}`)
+      await button.click()
+      await $('~button-Active').click()
+  });
+
+  it('Tela This button is', async () => {
+      const isDisplayed = await $("~parentPanel").isDisplayed()
+      expect(isDisplayed);
   });
 });
