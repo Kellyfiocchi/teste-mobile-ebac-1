@@ -2,6 +2,7 @@
 
 ## Módulo 16 - Testes Mobile - Parte 1
 
+
 ## Tecnologias utilizadas
 
 - Vs Code
@@ -13,19 +14,3 @@
 
 
 ![preview](./.github/preview.png)
-
-
-
-
-
-
-## Contato
-fiocchi1989_faculdade@outlook.com
-
-
-
-
-
-
-
-
